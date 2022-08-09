@@ -81,13 +81,13 @@ export default {
       else return false;
     },
     myLike() {
-        for (let i = 0; i < this.message.likes.length; i++) {
-          if (this.message.likes[i]['uid'] === this.uid) {
+      for (let i = 0; i < this.message.likes.length; i++) {
+          if (this.message.likes[i]['uid'] == this.uid) {
             this.myLikeId = this.message.likes[i]['id'];
             return true;
           }
-        return this.message.likes.includes(this.uid)
       } 
+      return false;
     },
     likesNum() {
       if (this.message.hasOwnProperty('likes')) {
